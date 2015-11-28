@@ -1,1 +1,5 @@
 C:\Users\Smirnyaga\GoogleDrive\code\C#\SpaceshipDrawer\SpaceshipDrawer\SpaceshipDrawer\bin\Debug\SpaceshipDrawer.exe.config
+C:\Users\Smirnyaga\GoogleDrive\code\C#\SpaceshipDrawer\SpaceshipDrawer\SpaceshipDrawer\obj\Debug\SpaceshipDrawer.csprojResolveAssemblyReference.cache
+C:\Users\Smirnyaga\GoogleDrive\code\C#\SpaceshipDrawer\SpaceshipDrawer\SpaceshipDrawer\obj\Debug\SpaceshipDrawer.Form1.resources
+C:\Users\Smirnyaga\GoogleDrive\code\C#\SpaceshipDrawer\SpaceshipDrawer\SpaceshipDrawer\obj\Debug\SpaceshipDrawer.Properties.Resources.resources
+C:\Users\Smirnyaga\GoogleDrive\code\C#\SpaceshipDrawer\SpaceshipDrawer\SpaceshipDrawer\obj\Debug\SpaceshipDrawer.csproj.GenerateResource.Cache

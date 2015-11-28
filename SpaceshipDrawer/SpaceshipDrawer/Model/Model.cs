@@ -461,7 +461,7 @@ namespace ShipConstructionTest1.Model
                 foreach (XmlElement el in root.GetElementsByTagName("Fixture"))
                 {
                     var f = Fixture.Unserial(el, hull);
-                    hull.AddFixture(f.MakeGeometry(), f);
+                    //hull.AddFixture(f.MakeGeometry(), f);
                 }
 
                 //foreach (XmlElement el in root.GetElementsByTagName("RoomTemplate"))
