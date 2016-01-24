@@ -10,6 +10,7 @@ namespace SpaceshipDrawer
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
