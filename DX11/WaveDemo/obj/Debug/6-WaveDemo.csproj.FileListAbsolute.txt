@@ -1,0 +1,12 @@
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\WaveDemo.exe.config
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\FX\color.fx
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\WaveDemo.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\WaveDemo.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\Core.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\SlimDX.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\SpriteTextRenderer.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\AssimpNet.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\Core.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\bin\Debug\AssimpNet.xml
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\obj\Debug\WaveDemo.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\WaveDemo\obj\Debug\WaveDemo.pdb

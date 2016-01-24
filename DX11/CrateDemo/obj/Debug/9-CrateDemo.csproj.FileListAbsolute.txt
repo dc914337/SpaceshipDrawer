@@ -1,0 +1,15 @@
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\CrateDemo.exe.config
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\FX\Basic.fx
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\FX\LightHelper.fx
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\Textures\WoodCrate01.dds
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\CrateDemo.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\CrateDemo.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\Core.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\SlimDX.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\SpriteTextRenderer.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\AssimpNet.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\Core.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\bin\Debug\AssimpNet.xml
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\obj\Debug\9-CrateDemo.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\obj\Debug\CrateDemo.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\CrateDemo\obj\Debug\CrateDemo.pdb

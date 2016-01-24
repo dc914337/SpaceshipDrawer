@@ -1,0 +1,14 @@
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\SkullDemo.exe.config
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\FX\color.fx
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\Models\car.txt
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\Models\skull.txt
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\SkullDemo.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\SkullDemo.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\Core.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\SlimDX.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\SpriteTextRenderer.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\AssimpNet.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\Core.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\bin\Debug\AssimpNet.xml
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\obj\Debug\SkullDemo.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\SkullDemo\obj\Debug\SkullDemo.pdb

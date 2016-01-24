@@ -1,0 +1,15 @@
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\BoxDemo.exe.config
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\FX\color.fx
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\BoxDemo.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\BoxDemo.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\Core.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\SlimDX.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\SpriteTextRenderer.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\AssimpNet.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\Core.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\SlimDX.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\SlimDX.xml
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\bin\Debug\AssimpNet.xml
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\obj\Debug\2-BoxDemo.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\obj\Debug\BoxDemo.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\BoxDemo\obj\Debug\BoxDemo.pdb

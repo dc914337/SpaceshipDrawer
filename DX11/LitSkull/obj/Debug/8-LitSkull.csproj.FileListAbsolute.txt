@@ -1,0 +1,15 @@
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\LitSkull.exe.config
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\FX\Basic.fx
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\FX\LightHelper.fx
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\Models\car.txt
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\Models\skull.txt
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\LitSkull.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\LitSkull.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\Core.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\SlimDX.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\SpriteTextRenderer.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\AssimpNet.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\Core.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\bin\Debug\AssimpNet.xml
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\obj\Debug\LitSkull.exe
+C:\Users\Dmitry\Desktop\dx11-master\DX11\LitSkull\obj\Debug\LitSkull.pdb

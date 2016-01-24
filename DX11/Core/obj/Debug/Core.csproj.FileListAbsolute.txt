@@ -1,0 +1,9 @@
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\bin\Debug\Core.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\bin\Debug\Core.pdb
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\bin\Debug\AssimpNet.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\bin\Debug\SlimDX.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\bin\Debug\SpriteTextRenderer.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\bin\Debug\AssimpNet.xml
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\obj\Debug\Core.dll
+C:\Users\Dmitry\Desktop\dx11-master\DX11\Core\obj\Debug\Core.pdb
