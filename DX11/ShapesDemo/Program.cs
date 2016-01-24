@@ -207,20 +207,20 @@ namespace ShapesDemo
 
         private void BuildGeometryBuffers()
         {
-            var box = GeometryGenerator.CreateBox(1.0f, 1.0f, 1.0f);
+            var spaceShip = GeometryGenerator.CreateSpaceship();
 
             _spaceShipVertexOffset = 0;
 
-            _spaceShipIndexCount = box.Indices.Count;
+            _spaceShipIndexCount = spaceShip.Indices.Count;
 
             _spaceShipIndexOffset = 0;
 
 
-            var totalVertexCount = box.Vertices.Count;
+            var totalVertexCount = spaceShip.Vertices.Count;
             var totalIndexCount = _spaceShipIndexCount;
 
             var vs = new List<VertexPC>();
-            foreach (var vertex in box.Vertices)
+            foreach (var vertex in spaceShip.Vertices)
             {
                 vs.Add(new VertexPC(vertex.Position, Color.Black));
             }
@@ -231,7 +231,7 @@ namespace ShapesDemo
             _vb = new Buffer(Device, new DataStream(vs.ToArray(), false, false), vbd);
 
             var indices = new List<int>();
-            indices.AddRange(box.Indices);
+            indices.AddRange(spaceShip.Indices);
 
 
             var ibd = new BufferDescription(sizeof(int) * totalIndexCount, ResourceUsage.Immutable,
