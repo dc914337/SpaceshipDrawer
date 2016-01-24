@@ -6,16 +6,43 @@ using System.Threading.Tasks;
 
 namespace SpaceshipDrawer.PolygonalModel
 {
-    class PolygonalModel
+    public class PolygonalModel
     {
         private List<Edge> _edges = new List<Edge>();
         private List<Vertex> _vertices = new List<Vertex>();
+        private Vertex _maxIndexVertex { get; set; } = null;
 
-        public void AddFragment(Vertex vertex)
+
+        public void AddFragment(Vertex vertex, bool connect)
         {
-            _vertices.Add(vertex);
+            AddVertex(vertex, connect);
             Reindex();
         }
+
+        public void AddFragment(PolygonalModel model, bool connect)
+        {
+            var startVertex = model._vertices.First(a => a.Index == model._vertices.Min(b => b.Index));
+            AddFragment(startVertex, connect);
+        }
+
+        public void AddVertex(Vertex vertex, bool createEdge)
+        {
+            Vertex oldLastVertex = _maxIndexVertex;
+
+            if (_maxIndexVertex != null)
+            {
+                vertex.Index = _maxIndexVertex.Index + 1;
+            }
+
+            _maxIndexVertex = vertex;
+            _vertices.Add(vertex);
+
+            if (createEdge && oldLastVertex != null)
+            {
+                _edges.Add(oldLastVertex.AddVertex(vertex));
+            }
+        }
+
 
 
         public void Reindex()
@@ -23,10 +50,16 @@ namespace SpaceshipDrawer.PolygonalModel
             bool done;
             do
             {
+                var newVertices = GetNotIndexedVertices();
+                var orderedByIndexVertices = newVertices.OrderBy(a => a.Index).ToList();
+                foreach (var newVertex in orderedByIndexVertices)
+                {
+                    AddVertex(newVertex, false);
+                }
+
                 var newEdges = GetNotIndexedEdges();
                 _edges.AddRange(newEdges);
-                var newVertices = GetNotIndexedVertices();
-                _vertices.AddRange(newVertices);
+
                 done = !(newEdges.Any() || newVertices.Any());
             } while (!done);
         }
@@ -40,6 +73,7 @@ namespace SpaceshipDrawer.PolygonalModel
             }
             return res.Distinct();
         }
+
         private IEnumerable<Vertex> GetNotIndexedVertices()
         {
             List<Vertex> res = new List<Vertex>();
