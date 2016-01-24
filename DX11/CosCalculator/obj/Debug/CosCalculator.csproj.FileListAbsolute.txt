@@ -1,0 +1,5 @@
+C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\CosCalculator\bin\Debug\CosCalculator.exe.config
+C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\CosCalculator\bin\Debug\CosCalculator.exe
+C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\CosCalculator\bin\Debug\CosCalculator.pdb
+C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\CosCalculator\obj\Debug\CosCalculator.exe
+C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\CosCalculator\obj\Debug\CosCalculator.pdb
