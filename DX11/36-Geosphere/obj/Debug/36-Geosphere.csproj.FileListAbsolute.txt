@@ -1,1 +1,0 @@
-C:\Users\Dmitry\Desktop\dx11-master\DX11\36-Geosphere\bin\Debug\36-Geosphere.exe.config
