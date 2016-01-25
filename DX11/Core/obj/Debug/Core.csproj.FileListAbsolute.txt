@@ -15,3 +15,4 @@ C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\Core\bin\Debug\SpriteT
 C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\Core\bin\Debug\AssimpNet.xml
 C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\Core\obj\Debug\Core.dll
 C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\Core\obj\Debug\Core.pdb
+C:\Users\Dmitry\Google Drive\code\C#\SpaceshipDrawer\DX11\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache

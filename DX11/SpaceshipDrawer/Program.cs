@@ -1,4 +1,4 @@
-﻿using ShipConstructionTest1.Model;
+﻿using SpaceshipDrawer.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -23,11 +23,14 @@ namespace SpaceshipDrawer
                 return;
             }
             app.Run();
+
+            var spaceship= GetSpaceship();
+
         }
 
 
 
-        static void GetSpaceship()
+        static Hull GetSpaceship()
         {
             Plane pl = new Plane(new Point3D(0, 0, 0), new Point3D(0, 1, 1), new Point3D(1, 0, 0));
             var pnt = new Point3D(0, 1, 0);
@@ -164,7 +167,7 @@ namespace SpaceshipDrawer
             model.AddRoom(new Room("Left room", templateRoom1, new Point3D(5, 5, 5)));
             model.AddRoom(new Room("Right room", templateRoom2, new Point3D(20, 5, 5)));
 
-
+            return model;
             //RoomPolygonizer polygonizer = new RoomPolygonizer(new Room("Left room", templateRoom1, new Point3D(5, 5, 5)));
             // var v = polygonizer.GetVertices();
         }

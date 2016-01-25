@@ -9,8 +9,9 @@ using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using System.Xml;
 
-namespace ShipConstructionTest1.Model
+namespace SpaceshipDrawer.Model
 {
+    
     /// <summary>
     /// Материал корпуса
     /// </summary>
@@ -130,6 +131,7 @@ namespace ShipConstructionTest1.Model
             el.SetAttribute("To", _pointsConverter.ConvertToString(this.To));
             targetElement.AppendChild(el);
         }
+
     }
 
     /// <summary>
@@ -164,6 +166,8 @@ namespace ShipConstructionTest1.Model
             this.Material = material;
             this.Interpolation = CoverFragmentInterpolation.None;
         }
+
+
     }
 
     /// <summary>
@@ -265,11 +269,25 @@ namespace ShipConstructionTest1.Model
         public Vector3D Normal { get; private set; }
         public double Distance { get; private set; }
 
+        public Plane(Point3D a, Point3D b, Point3D c)
+        {
+            var n = Vector3D.CrossProduct(b - a, c - b);
+            n.Normalize();
+            Distance = (a.X * n.X + a.Y * n.Y + a.Z * n.Z);
+            Normal = n;
+        }
+
         public Plane(Vector3D normal, double distance)
         {
             this.Normal = normal;
             this.Distance = distance;
         }
+    }
+
+    public class Point2D
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
     }
 
     /// <summary>
@@ -288,15 +306,23 @@ namespace ShipConstructionTest1.Model
 
         public Plane Plane { get; private set; }
 
+
+        public Polygon(HullMaterial material, IEnumerable<Point3D> points)
+        {
+            this.Material = material;
+            var planePoints = points.Take(3).ToArray();
+            this.Plane = new Plane(planePoints[0], planePoints[1], planePoints[2]);
+            _points.AddRange(points);
+        }
+
+
         public Polygon(HullMaterial material, Point3D a, Point3D b, Point3D c)
         {
             this.Material = material;
-
-            var n = Vector3D.CrossProduct(b - a, c - b);
-            n.Normalize();
-            var dst = (a.X * n.X + a.Y * n.Y + a.Z * n.Z);
-            this.Plane = new Plane(n, dst);
+            this.Plane = new Plane(a, b, c);
         }
+
+
 
         public void Add(Point3D p)
         {
@@ -316,6 +342,7 @@ namespace ShipConstructionTest1.Model
         }
     }
 
+
     /// <summary>
     /// Шаблон отсека
     /// </summary>
@@ -324,20 +351,24 @@ namespace ShipConstructionTest1.Model
         public string Name { get; set; }
 
         List<Polygon> _planes = new List<Polygon>();
-        public IEnumerable<Polygon> Planes { get { return _planes; } }
+        public IList<Polygon> Planes { get { return _planes; } }
 
-        // OXPlane, OYPlane, OZPlane - плоскости разбиения, разделяющие группы вершин в направлениях масштабирования
+        // XoYPlane, YoZPlane, ZoXPlane - плоскости разбиения, разделяющие группы вершин в направлениях масштабирования
         // При масштабировании в некотором направлении, соответствующие группы вершин раздвигаются в противоположные стороны с сохранением полигональной сетки.
 
-        public Plane OXPlane { get; set; }
-        public Plane OYPlane { get; set; }
-        public Plane OZPlane { get; set; }
+        public Plane XoYPlane { get; set; }
+        public Plane YoZPlane { get; set; }
+        public Plane ZoXPlane { get; set; }
 
         public RoomTemplate(string name)
         {
             this.Name = name;
         }
     }
+
+
+
+
 
     /// <summary>
     /// Отсек
@@ -361,6 +392,7 @@ namespace ShipConstructionTest1.Model
             this.Template = template;
             this.Position = position;
         }
+
     }
 
     /// <summary>
@@ -373,24 +405,25 @@ namespace ShipConstructionTest1.Model
         public string Name { get; set; }
 
         // словари применены только для упрощения индексации при редактировании структуры модели
-
         Dictionary<string, HullMaterial> _materials = new Dictionary<string, HullMaterial>();
         public IEnumerable<HullMaterial> Materials { get { return _materials.Values; } }
 
         Dictionary<string, FixtureKind> _fixtureKinds = new Dictionary<string, FixtureKind>();
         public IEnumerable<FixtureKind> FixtureKinds { get { return _fixtureKinds.Values; } }
 
-        Dictionary<GeometryModel3D, Fixture> _fixtures = new Dictionary<GeometryModel3D, Fixture>();
-        public IEnumerable<Fixture> Fixtures { get { return _fixtures.Values; } }
-
-        Dictionary<GeometryModel3D, Room> _rooms = new Dictionary<GeometryModel3D, Room>();
-        public IEnumerable<Room> Rooms { get { return _rooms.Values; } }
-
         Dictionary<string, RoomTemplate> _roomTemplates = new Dictionary<string, RoomTemplate>();
         public IEnumerable<RoomTemplate> RoomTemplates { get { return _roomTemplates.Values; } }
 
-        Dictionary<GeometryModel3D, CoverFragment> _coverings = new Dictionary<GeometryModel3D, CoverFragment>();
-        public IEnumerable<CoverFragment> Coverings { get { return _coverings.Values; } }
+
+        //objects to create polygon model from
+        IList<Fixture> _fixtures = new List<Fixture>();
+        public IList<Fixture> Fixtures { get { return _fixtures; } }
+
+        IList<Room> _rooms = new List<Room>();
+        public IList<Room> Rooms { get { return _rooms; } }
+
+        IList<CoverFragment> _coverings = new List<CoverFragment>();
+        public IList<CoverFragment> Coverings { get { return _coverings; } }
 
 
         public Hull(string name)
@@ -415,15 +448,15 @@ namespace ShipConstructionTest1.Model
             this.RaizePropertyChanged("FixtureKinds");
         }
 
-        public void AddFixture(GeometryModel3D model, Fixture fixture)
+        public void AddFixture(Fixture fixture)
         {
-            _fixtures.Add(model, fixture);
+            _fixtures.Add(fixture);
             this.RaizePropertyChanged("Fixtures");
         }
 
-        public void AddRoom(GeometryModel3D model, Room room)
+        public void AddRoom(Room room)
         {
-            _rooms.Add(model, room);
+            _rooms.Add(room);
             this.RaizePropertyChanged("Rooms");
         }
 
@@ -435,7 +468,7 @@ namespace ShipConstructionTest1.Model
 
         public void AddCover(GeometryModel3D model, CoverFragment cover)
         {
-            _coverings.Add(model, cover);
+            _coverings.Add(cover);
             this.RaizePropertyChanged("Coverings");
         }
 
@@ -504,8 +537,8 @@ namespace ShipConstructionTest1.Model
                 foreach (var item in _fixtureKinds.Values)
                     item.SerialTo(root);
 
-                foreach (var item in _fixtures.Values)
-                    item.SerialTo(root);
+                //  foreach (var item in _fixtures.Values)
+                //  item.SerialTo(root);
 
                 //foreach (var item in _roomTemplates.Values)
                 //    item.SerialTo(root);
@@ -523,5 +556,6 @@ namespace ShipConstructionTest1.Model
                 Thread.CurrentThread.CurrentCulture = culture;
             }
         }
+
     }
 }
