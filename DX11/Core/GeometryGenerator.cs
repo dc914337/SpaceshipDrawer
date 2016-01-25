@@ -148,9 +148,15 @@ namespace Core
             ret.Vertices.Add(new Vertex(+w2, +h2, +d2, 0, 0, 0, 0, 0, 0, 0, 0));
             ret.Vertices.Add(new Vertex(+w2, -h2, +d2, 0, 0, 0, 0, 0, 0, 0, 0));
 
+            // another
+            ret.Vertices.Add(new Vertex(2 * w2, -2 * h2, -2 * d2, 0, 0, 0, 0, 0, 0, 0, 0));
+            ret.Vertices.Add(new Vertex(2 * w2, +2 * h2, -2 * d2, 0, 0, 0, 0, 0, 0, 0, 0));
+            ret.Vertices.Add(new Vertex(2 * w2, +2 * h2, +2 * d2, 0, 0, 0, 0, 0, 0, 0, 0));
+            ret.Vertices.Add(new Vertex(2 * w2, -2 * h2, 2 * d2, 0, 0, 0, 0, 0, 0, 0, 0));
+
             ret.Indices.AddRange(new[]{
-                0,1,2,0,2,3,
-                4,5,6,4,6,7,
+                0,1,2,0,
+                2,3,4,5,6,4,6,7,
                 8,9,10,8,10,11,
                 12,13,14,12,14,15,
                 16,17,18,16,18,19,
