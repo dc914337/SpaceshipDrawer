@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Windows.Media.Media3D;
+using System.Windows.Media;
+using SpaceshipDrawer.polygonizer.algorithms;
+
 namespace SpaceshipDrawer.polygonizer
 {
     class RoomPolygonizer
@@ -22,17 +26,20 @@ namespace SpaceshipDrawer.polygonizer
             List<Mesh> wallMeshes = new List<Mesh>();
             foreach (var wall in _room.Template.Planes)
             {
-                wallMeshes.AddRange(GetWallMeshes(wall));
+                foreach (var mesh in GetWallMeshes(wall))
+                {
+                    model.AddMesh(mesh);
+                }
+
             }
-
-            return model.GetMeshes();
+            return model;
         }
 
-        private List<Mesh> GetWallMeshes(Polygon plane)
+        private IEnumerable<Mesh> GetWallMeshes(Polygon plane)
         {
-
-            return null;
+            return DXTriangulator.TriangulateNMesh(plane.Points);
         }
+
 
 
     }

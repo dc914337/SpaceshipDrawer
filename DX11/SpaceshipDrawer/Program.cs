@@ -1,4 +1,5 @@
 ﻿using SpaceshipDrawer.Model;
+using SpaceshipDrawer.polygonizer;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,16 +17,20 @@ namespace SpaceshipDrawer
         //using Plane = SpaceshipDrawer.Model.Plane;
         static void Main(string[] args)
         {
+
+            var spaceship = GetSpaceship();
+
             SlimDX.Configuration.EnableObjectTracking = true;
-            var app = new TestApp(Process.GetCurrentProcess().Handle);
+            var app = new TestApp(Process.GetCurrentProcess().Handle,spaceship);
             if (!app.Init())
             {
                 return;
             }
             app.Run();
 
-            var spaceship= GetSpaceship();
+           
 
+            
         }
 
 
@@ -54,24 +59,24 @@ namespace SpaceshipDrawer
                new Point3D(2, 1, 1));
             //room 1
             var p1 = new Point3D(0, 0, 0);
-            var p2 = new Point3D(10, 0, 0);
-            var p3 = new Point3D(10, 0, 10);
-            var p4 = new Point3D(0, 0, 10);
-            var p5 = new Point3D(0, 10, 0);
-            var p6 = new Point3D(10, 10, 0);
-            var p7 = new Point3D(10, 10, 10);
-            var p8 = new Point3D(0, 10, 10);
+            var p2 = new Point3D(3, 0, 0);
+            var p3 = new Point3D(3, 0, 3);
+            var p4 = new Point3D(0, 0, 3);
+            var p5 = new Point3D(0, 3, 0);
+            var p6 = new Point3D(3, 3, 0);
+            var p7 = new Point3D(3, 3, 3);
+            var p8 = new Point3D(0, 3, 3);
 
             //1
             templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
             {
-                p1,
-               p2,
+                p4,
                p3,
-               p4
+               p2,
+               p1
             }));
             //2
-            templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
+           /* templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
             {
               p5,
                 p8,
@@ -99,7 +104,7 @@ namespace SpaceshipDrawer
             templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
             {
                 p3,p7,p8,p4
-            }));
+            }));*/
             //room 2
             RoomTemplate templateRoom2 = new RoomTemplate("right room");
             templateRoom2.XoYPlane = new Plane(
@@ -116,13 +121,13 @@ namespace SpaceshipDrawer
                new Point3D(2, 1, 1));
 
             p1 = new Point3D(0 + 15, 0, 0);
-            p2 = new Point3D(10 + 15, 0, 0);
-            p3 = new Point3D(10 + 15, 0, 10);
-            p4 = new Point3D(0 + 15, 0, 10);
-            p5 = new Point3D(0 + 15, 10, 0);
-            p6 = new Point3D(10 + 15, 10, 0);
-            p7 = new Point3D(10 + 15, 10, 10);
-            p8 = new Point3D(0 + 15, 10, 10);
+            p2 = new Point3D(6 + 15, 0, 0);
+            p3 = new Point3D(6 + 15, 0, 6);
+            p4 = new Point3D(0 + 15, 0, 6);
+            p5 = new Point3D(0 + 15, 6, 0);
+            p6 = new Point3D(6 + 15, 6, 0);
+            p7 = new Point3D(6 + 15, 6, 6);
+            p8 = new Point3D(0 + 15, 6, 6);
             //7
             templateRoom2.Planes.Add(new Polygon(material, new List<Point3D>()
             {

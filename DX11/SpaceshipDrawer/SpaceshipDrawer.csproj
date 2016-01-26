@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MIConvexHull, Version=1.0.10.1021, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MIConvexHull.1.0.10.1045\lib\portable-net4+sl4+wp7+win8\MIConvexHull.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86" />
     <Reference Include="System" />
@@ -48,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="polygonizer\algorithms\Triangulator.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="polygonizer\PolygonalModel.cs" />
     <Compile Include="polygonizer\RoomPolygonizer.cs" />
@@ -56,15 +61,21 @@
     <Compile Include="TestApp.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MIConvexHull.xml" />
     <None Include="App.config" />
     <Content Include="FX\color.fx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{41acbef1-b159-4c49-a0f9-a07911617b52}</Project>
       <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Triangulator\Triangulator.csproj">
+      <Project>{3f0d8cdb-da69-4402-8e2a-6f97a81cff27}</Project>
+      <Name>Triangulator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
