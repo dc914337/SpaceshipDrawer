@@ -60,7 +60,7 @@ namespace SpaceshipDrawer.polygonizer.algorithms
 
 
 
-        private class Translated2DPoint : Triangulator.Geometry.Point, IEqualityComparer<Translated2DPoint>
+        private class Translated2DPoint : Triangulator.Geometry.Point
         {
             public Point3D Point3D { get; set; }
 
@@ -82,19 +82,6 @@ namespace SpaceshipDrawer.polygonizer.algorithms
                         base.Y = point3d.Y;
                         break;
                 }
-            }
-
-
-
-
-            public bool Equals(Translated2DPoint x, Translated2DPoint y)
-            {
-                throw new NotImplementedException();
-            }
-
-            public int GetHashCode(Translated2DPoint obj)
-            {
-                throw new NotImplementedException();
             }
         }
 

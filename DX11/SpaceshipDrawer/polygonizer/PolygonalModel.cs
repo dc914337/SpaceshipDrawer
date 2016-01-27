@@ -14,11 +14,6 @@ namespace SpaceshipDrawer.polygonizer
 
         public void AddMesh(Mesh mesh)
         {
-            int firstVertexIndex = 0;
-
-            if (Vertexes.Any())
-                firstVertexIndex = Indexes.Max() + 1;
-
             foreach (var vertex in mesh.Vertexes)
             {
                 var newIndex = 0;
@@ -27,7 +22,6 @@ namespace SpaceshipDrawer.polygonizer
                 Vertexes.Add(vertex);
                 Indexes.Add(newIndex);
             }
-            Indexes.Add(firstVertexIndex);
         }
 
     }

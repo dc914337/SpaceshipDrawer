@@ -22,8 +22,7 @@ namespace SpaceshipDrawer.polygonizer
         public PolygonalModel GetMeshes()
         {
             PolygonalModel model = new PolygonalModel();
-
-            List<Mesh> wallMeshes = new List<Mesh>();
+            
             foreach (var wall in _room.Template.Planes)
             {
                 foreach (var mesh in GetWallMeshes(wall))

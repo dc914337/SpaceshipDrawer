@@ -21,16 +21,16 @@ namespace SpaceshipDrawer
             var spaceship = GetSpaceship();
 
             SlimDX.Configuration.EnableObjectTracking = true;
-            var app = new TestApp(Process.GetCurrentProcess().Handle,spaceship);
+            var app = new TestApp(Process.GetCurrentProcess().Handle, spaceship);
             if (!app.Init())
             {
                 return;
             }
             app.Run();
 
-           
 
-            
+
+
         }
 
 
@@ -67,44 +67,60 @@ namespace SpaceshipDrawer
             var p7 = new Point3D(3, 3, 3);
             var p8 = new Point3D(0, 3, 3);
 
-            //1
+            var f1 = new Point3D(0, 0, -1);
+            var f2 = new Point3D(1, 0, -1);
+            var f3 = new Point3D(1, 1, -1);
+
+
+            //f1
             templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
             {
-                p4,
-               p3,
-               p2,
-               p1
+                f1,
+                f2,
+               f3
             }));
-            //2
-           /* templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
-            {
-              p5,
-                p8,
-                p7,
-                p6
-            }));
-            //3
-            templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
-            {
-              p1,p4,p8,p5
-            }));
-            //4
-            var polygon4 = new Polygon(material, new List<Point3D>()
-            {
-               p2,p6,p7,p3
-            });
-            polygon4.Add(joint);
-            templateRoom1.Planes.Add(polygon4);
-            //5
-            templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
-            {
-                p1,p5,p6,p2
-            }));
-            //6
-            templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
-            {
-                p3,p7,p8,p4
-            }));*/
+
+
+
+            /*
+                        //1
+                        templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
+                        {
+                            p4,
+                            p3,
+                           p2,
+                           p1
+                        }));
+                        //2
+                        templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
+                        {
+                          p5,
+                            p8,
+                            p7,
+                            p6
+                        }));
+                        //3
+                        templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
+                        {
+                          p1,p4,p8,p5
+                        }));
+                        //4
+                        var polygon4 = new Polygon(material, new List<Point3D>()
+                        {
+                           p2,p6,p7,p3
+                        });
+                        polygon4.Add(joint);
+                        templateRoom1.Planes.Add(polygon4);
+                        //5
+                        templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
+                        {
+                            p1,p5,p6,p2
+                        }));
+                        //6
+                        templateRoom1.Planes.Add(new Polygon(material, new List<Point3D>()
+                        {
+                            p3,p7,p8,p4
+                        }));*/
             //room 2
             RoomTemplate templateRoom2 = new RoomTemplate("right room");
             templateRoom2.XoYPlane = new Plane(
